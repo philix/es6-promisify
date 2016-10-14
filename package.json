@@ -1,9 +1,9 @@
 {
-  "name": "es6-promisify",
-  "version": "5.0.0",
+  "name": "promisify-native",
+  "version": "1.0.0",
   "description": "Converts callback-based functions to browser-native Promises",
   "main": "dist/promisify.js",
-  "author": "Mike Hall <mikehall314@gmail.com>",
+  "author": "Felipe Oliveira Carvalho <felipekde@gmail.com>",
   "keywords": [
     "promises",
     "es6",
@@ -14,13 +14,15 @@
     "pretest": "./node_modules/eslint/bin/eslint.js ./lib/*.js ./tests/*.js",
     "test": "gulp && nodeunit tests"
   },
-  "bugs": "http://github.com/digitaldesignlabs/es6-promisify/issues",
+  "bugs": {
+    "url": "http://github.com/philix/promisify-native/issues"
+  },
   "files": [
     "dist/promisify.js"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitaldesignlabs/es6-promisify.git"
+    "url": "git+https://github.com/philix/promisify-native.git"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.9.0",
@@ -33,5 +35,10 @@
     "ignore": [
       "eslint"
     ]
-  }
+  },
+  "homepage": "https://github.com/philix/promisify-native#readme",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {}
 }

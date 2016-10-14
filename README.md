@@ -1,15 +1,15 @@
-[![Travis CI](https://travis-ci.org/digitaldesignlabs/es6-promisify.svg)](https://travis-ci.org/digitaldesignlabs/es6-promisify)
+[![Travis CI](https://travis-ci.org/philix/promisify-native.svg)](https://travis-ci.org/philix/promisify-native)
 
-# es6-promisify
+# promisify-native
 
 Converts callback-based functions to Promise-based functions.
 
 ## Install
 
-Install with [npm](https://npmjs.org/package/es6-promisify)
+Install with [npm](https://npmjs.org/package/promisify-native)
 
 ```bash
-npm install --save es6-promisify
+npm install --save promisify-native
 ```
 
 ## Example
@@ -18,7 +18,7 @@ npm install --save es6-promisify
 "use strict";
 
 // Declare variables
-const promisify = require("es6-promisify");
+const promisify = require("promisify-native");
 const fs = require("fs");
 
 // Convert the stat function
@@ -37,7 +37,7 @@ stat("example.txt").then(function (stats) {
 "use strict";
 
 // Declare variables
-const promisify = require("es6-promisify");
+const promisify = require("promisify-native");
 const redis = require("redis").createClient(6379, "localhost");
 
 // Create a promise-based version of send_command
@@ -63,7 +63,7 @@ function test(cb) {
 }
 
 // Declare variables
-const promisify = require("es6-promisify");
+const promisify = require("promisify-native");
 
 // Create promise-based version of test
 const single = promisify(test);
