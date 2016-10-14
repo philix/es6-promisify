@@ -7,7 +7,7 @@ var babel = require("gulp-babel");
 
 // Compile javascript with optional minification
 gulp.task("scripts", function () {
-    return gulp.src(["./lib/promisify.js", "./lib/promise.js"])
+    return gulp.src(["./lib/promisify.js"])
         .pipe(babel({presets: ["es2015"]}))
         .pipe(gulp.dest("dist"));
 });

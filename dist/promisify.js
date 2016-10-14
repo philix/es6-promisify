@@ -5,9 +5,16 @@ module.exports = function () {
 
     "use strict";
 
-    // Get a promise object. This may be native, or it may be polyfilled
+    var globalObject = void 0;
 
-    var ES6Promise = require("./promise.js");
+    // Seek the global object
+    if (global !== undefined) {
+        globalObject = global;
+    } else if (window !== undefined && window.document) {
+        globalObject = window;
+    } else {
+        globalObject = self;
+    }
 
     /**
      * thatLooksLikeAPromiseToMe()
@@ -51,8 +58,7 @@ module.exports = function () {
             }
 
             // Return the promisified function
-            return new ES6Promise(function (resolve, reject) {
-
+            return new globalObject.Promise(function (resolve, reject) {
                 // Append the callback bound to the context
                 args.push(function callback(err) {
 

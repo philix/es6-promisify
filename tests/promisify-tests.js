@@ -3,9 +3,8 @@ module.exports = (function () {
 
     "use strict";
 
-    var ES6Promise, promisify, o;
+    var promisify, o;
 
-    ES6Promise = require("../dist/promise.js");
     promisify = require("../dist/promisify.js");
 
     // Test function. If fail is true, will callback with an error.
@@ -168,7 +167,7 @@ module.exports = (function () {
                 }, 10);
             });
 
-            ES6Promise.all([
+            Promise.all([
                 promisified(),
                 promisified(),
                 promisified()
